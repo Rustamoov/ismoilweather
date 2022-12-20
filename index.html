@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/icons/img.png">
+    <title>Weather</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__box">
+                <h2 class="header__title title">MY WEATHER</h2>
+                <div class="search__box">
+                    <input type="text" id="input" class="header__search" placeholder="Type region...">
+                    <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="section-1">
+        <div class="container">
+            <button type="submit" id="today__btn" class="switch__btn">Today</button>
+            <button type="submit" id="5-day__btn" class="switch__btn">5-day forecast</button>
+        </div>
+    </div>
+    <div class="tabs__content-item">
+    <div id="forError">
+            <main class="main">
+                <div class="main__container container">
+                    <div class="main__content">
+                        <div class="section-2">
+                            <div class="section__text">
+                                <h3 class="section__title title">CURRENT WEATHER</h3>
+                                <h3 class="section__date title">30.06.2018</h3>
+                            </div>
+                            <div class="section__content">
+                                <div class="weather__state">
+                                    <img src="./assets/icons/clouds.png" alt="" class="state__img">
+                                    <p class="state__text">-</p>
+                                </div>
+                                <div class="weather__temp">
+                                    <h2 class="temperature">-°C</h2>
+                                    <p class="temp__feel">Real feel -°C</p>
+                                </div>
+                                <div class="day__dur">
+                                    <table class="day__dur-table">
+                                        <tr>
+                                            <th>Sunrise:</th>
+                                            <td id="sunrise">-:-- AM</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sunset:</th>
+                                            <td id="sunset">-:-- PM</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Duration:</th>
+                                            <td id="duration">--:-- hr</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-3">
+                            <h3 class="sec__title title">HOURLY</h3>
+                            <table class="sec__table">
+                                <thead>
+                                    <tr>
+                                        <th class="table__title">TODAY</th>
+                                        <td id="weatherTime">-</td>
+                                        <td id="weatherTime">-</td>
+                                        <td id="weatherTime">-</td>
+                                        <td id="weatherTime">-</td>
+                                        <td id="weatherTime">-</td>
+                                        <td id="weatherTime">-</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                        <td><img id="weatherImg" src="./assets/icons/clouds.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Forecast</th>
+                                        <td id="weatherState">-</td>
+                                        <td id="weatherState">-</td>
+                                        <td id="weatherState">-</td>
+                                        <td id="weatherState">-</td>
+                                        <td id="weatherState">-</td>
+                                        <td id="weatherState">-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Temp (°C)</th>
+                                        <td id="weatherTemp">-</td>
+                                        <td id="weatherTemp">-</td>
+                                        <td id="weatherTemp">-</td>
+                                        <td id="weatherTemp">-</td>
+                                        <td id="weatherTemp">-</td>
+                                        <td id="weatherTemp">-</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Real Feel</th>
+                                        <td id="weatherFeel">-</td>
+                                        <td id="weatherFeel">-</td>
+                                        <td id="weatherFeel">-</td>
+                                        <td id="weatherFeel">-</td>
+                                        <td id="weatherFeel">-</td>
+                                        <td id="weatherFeel">-</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th>Wind (km/h)</th>
+                                        <td id="weatherSpeed">-</td>
+                                        <td id="weatherSpeed">-</td>
+                                        <td id="weatherSpeed">-</td>
+                                        <td id="weatherSpeed">-</td>
+                                        <td id="weatherSpeed">-</td>
+                                        <td id="weatherSpeed">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+        </div>
+    </div>
+    <div class="tabs__content-item">
+        <div id="forError">
+            <div class="days__box">
+                <div class="container">
+                    <div class="days__content">
+                        <div class="day">
+                            <h3 class="day__title title"></h3>
+                            <h2 class="day__date"></h2>
+                            <div class="day__temp">
+                                <img src="./assets/icons/sunny.png" alt="" class="day__temp-img">
+                                <div class="day__temp-digits"></div>
+                                <p class="day__temp-descr"></p>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <h3 class="day__title title"></h3>
+                            <h2 class="day__date"> </h2>
+                            <div class="day__temp">
+                                <img src="./assets/icons/sunny.png" alt="" class="day__temp-img">
+                                <div class="day__temp-digits"></div>
+                                <p class="day__temp-descr"> </p>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <h3 class="day__title title"></h3>
+                            <h2 class="day__date"> </h2>
+                            <div class="day__temp">
+                                <img src="./assets/icons/sunny.png" alt="" class="day__temp-img">
+                                <div class="day__temp-digits"></div>
+                                <p class="day__temp-descr"> </p>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <h3 class="day__title title"></h3>
+                            <h2 class="day__date"> </h2>
+                            <div class="day__temp">
+                                <img src="./assets/icons/sunny.png" alt="" class="day__temp-img">
+                                <div class="day__temp-digits"></div>
+                                <p class="day__temp-descr"> </p>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <h3 class="day__title title"></h3>
+                            <h2 class="day__date"> </h2>
+                            <div class="day__temp">
+                                <img src="./assets/icons/sunny.png" alt="" class="day__temp-img">
+                                <div class="day__temp-digits"></div>
+                                <p class="day__temp-descr"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-3">
+                        <h3 class="sec__title title">HOURLY</h3>
+                        <table class="sec__table">
+                            <thead>
+                                <tr>
+                                    <th class="table__title">TODAY</th>
+                                    <td class="hourly__time">Morning</td>
+                                    <td class="hourly__time">Day</td>
+                                    <td class="hourly__time">Evening</td>
+                                    <td class="hourly__time">Night</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <td><img id="days__img" src="./assets/icons/sunny.png" alt=""></td>
+                                    <td><img id="days__img" src="./assets/icons/sunny.png" alt=""></td>
+                                    <td><img id="days__img" src="./assets/icons/clouds.png" alt=""></td>
+                                    <td><img src="./assets/icons/clouds.png" id="days__img"alt=""></td>
+                
+                                </tr>
+                                <tr>
+                                    <th>Forecast</th>
+                                    <td id="days__descr">-</td>
+                                    <td id="days__descr">-</td>
+                                    <td id="days__descr">-</td>
+                                    <td id="days__descr">-</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Temp (°C)</th>
+                                    <td id="days__temp">-</td>
+                                    <td id="days__temp">-</td>
+                                    <td id="days__temp">-</td>
+                                    <td id="days__temp">-</td>
+                                </tr>
+                                <tr>
+                                    <th>Real Feel</th>
+                                    <td id="days__feel">-</td>
+                                    <td id="days__feel">-</td>
+                                    <td id="days__feel">-</td>
+                                    <td id="days__feel">-</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Wind (km/h)</th>
+                                    <td id="days__speed">-</td>
+                                    <td id="days__speed">-</td>
+                                    <td id="days__speed">-</td>
+                                    <td id="days__speed">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="error">
+        <div class="error__container container">
+            <div class="error-content">
+                <div class="error-img"><img src="./assets/img/404.png" alt=""></div>
+                <div class="error-text">
+                    <p id="text"></p>
+                    <p id="text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+    </html>

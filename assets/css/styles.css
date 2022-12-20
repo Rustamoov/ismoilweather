@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: rgb(221, 221, 221);
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;    
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.header {
+    background-color: rgb(240, 240, 240);
+}
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.tabs__content-item{
+    padding: 16px;
+    line-height: 1.5;
+    height: 100%;
+    align-items: center;
+    display: none;
+}
+.tabs__content-item.active{
+    display: block;
+}
+
+.title {
+    color: rgb(50, 156, 130);
+    font-size: 17px;
+}
+.header__title {
+    font-size: 24px;
+}
+.header__search {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid rgb(165, 165, 165);
+    outline: none;
+    border-radius: 25px;
+}
+.search__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search__icon {
+    position: absolute;
+    right: 15px;
+}
+.main {
+    background-color: rgb(221, 221, 221);
+    padding-top: 10px;
+}
+.section-1 {
+    background-color: rgb(65, 65, 65);
+    padding: 15px;
+}
+.switch__btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 0 20px 0 5px;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.switch__btn.active{
+    color: rgb(50, 156, 130);
+}
+.section-2 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+}
+.section__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.weather__state {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.temperature {
+    font-size: 40px;
+    font-weight: 500;
+}
+.temp__feel {
+    font-size: 14px;
+    color: gray;
+}
+.day__dur-table{
+    width: 230px;
+}
+
+.section-3{
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.sec__table {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.table__title {
+    color: rgb(130, 130, 130);  
+}
+
+.sec__table th {
+    text-align: start;
+    padding: 15px 15px 15px 20px;
+    color: rgb(88, 88, 88);
+}
+
+.days__box {
+    margin-top: 10px;
+}
+.days__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.day {
+    cursor: pointer;
+    width: 215px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #fff;
+    transition: .5s;
+}
+.day:hover {
+    background-color: rgb(192, 192, 192);
+}
+.day-active{
+    background-color: rgb(192, 192, 192);
+}
+.error__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-img img{
+    width: 500px;   
+}
+#error{
+    display: none;
+}
+.non-active{
+    display: none;
+}
+.error-active{
+    display: block;
+}
+.error-text p{
+    text-align: center;
+}
+.for__error-active{
+    display: block;
+}
